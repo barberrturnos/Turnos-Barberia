@@ -100,6 +100,7 @@
         .hero h1 {
             font-size: 2.8rem;
             font-weight: 800;
+            margin-top: 80px; /* EMPUJA EL TEXTO HACIA ABAJO PARA NO TAPAR EL LOGO */
             margin-bottom: 15px;
             text-transform: uppercase;
             text-shadow: 0 2px 10px rgba(0,0,0,0.9);
@@ -183,16 +184,17 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        /* AJUSTE CLAVE EN CELULARES */
+        /* AJUSTE PARA CELULARES */
         @media (max-width: 768px) {
             .hero {
                 padding: 100px 5% 80px;
-                background-size: 100% auto; /* Ajusta la imagen al ancho exacto de la pantalla sin cortar los costados */
+                background-size: 100% auto;
                 background-position: center top;
             }
 
             .hero h1 { 
                 font-size: 1.8rem; 
+                margin-top: 100px; /* DISTANCIA EXTRA EN CELULAR PARA DEJAR VER LAS LETRAS DEL LOGO */
             }
 
             .hero p {
