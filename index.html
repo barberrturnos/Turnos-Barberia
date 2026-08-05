@@ -86,12 +86,12 @@
             transform: translateY(-2px);
         }
 
-        /* Hero Section */
+        /* Hero Section - AQUÍ SE CAMBIA LA FOTO DE FONDO */
         .hero {
-            padding: 80px 8% 60px;
+            padding: 100px 8% 80px;
             text-align: center;
-            background: linear-gradient(180deg, rgba(15,17,21,0.6) 0%, rgba(15,17,21,1) 100%),
-                        url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            background: linear-gradient(180deg, rgba(15,17,21,0.7) 0%, rgba(15,17,21,1) 100%),
+                        url('foto-barberia.jpg') center/cover no-repeat;
         }
 
         .hero h1 {
@@ -112,62 +112,53 @@
             margin: 0 auto 30px;
         }
 
-        /* Servicios */
+        /* Sección del Servicio */
         .section-title {
             text-align: center;
             font-size: 2rem;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .services {
-            padding: 60px 8%;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .service-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 25px;
-            transition: all 0.3s;
+            padding: 40px 8% 60px;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
         }
 
-        .service-card:hover {
-            border-color: var(--accent-color);
-            transform: translateY(-5px);
+        .single-service-card {
+            background-color: var(--card-bg);
+            border: 2px solid var(--accent-color);
+            border-radius: 16px;
+            padding: 35px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
 
         .service-title {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
             color: var(--text-main);
         }
 
         .service-desc {
             color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
+            font-size: 1rem;
+            margin-bottom: 25px;
         }
 
         .service-price-time {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1.4rem;
             color: var(--accent-color);
             border-top: 1px solid var(--border-color);
-            padding-top: 15px;
+            padding-top: 20px;
         }
 
         /* Booking Section */
@@ -198,9 +189,9 @@
 
     <!-- Header -->
     <header>
-        <div class="logo">✂️ BARBERÍA & ESTILO</div>
+        <div class="logo">✂️ BARBERÍA</div>
         <nav>
-            <a href="#servicios">Servicios</a>
+            <a href="#servicio">Servicio</a>
             <a href="#reservar">Reservar Turno</a>
         </nav>
         <a href="#reservar" class="btn-header">Pedir Turno</a>
@@ -209,49 +200,22 @@
     <!-- Hero -->
     <section class="hero">
         <h1>Tu Estilo, <span>Sin Esperas</span></h1>
-        <p>Elegí el servicio, seleccioná el día y horario disponible y reservá tu turno al instante.</p>
+        <p>Elegí tu horario disponible y reservá tu turno al instante.</p>
     </section>
 
-    <!-- Servicios -->
-    <section class="services" id="servicios">
-        <h2 class="section-title">Nuestros Servicios</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div>
-                    <h3 class="service-title">Corte Tradicional / Fade</h3>
-                    <p class="service-desc">Corte con asesoramiento de imagen, lavado, peinado con pomada profesional y acabado a navaja.</p>
-                </div>
-                <div class="service-price-time">
-                    <span>⏱️ 30 min</span>
-                    <span>$8.000</span>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div>
-                    <h3 class="service-title">Perfilado de Barba</h3>
-                    <p class="service-desc">Ritual de toalla caliente, perfilado con navaja, rebajado y aceite hidratante para barba.</p>
-                </div>
-                <div class="service-price-time">
-                    <span>⏱️ 25 min</span>
-                    <span>$6.000</span>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div>
-                    <h3 class="service-title">Combo Completo</h3>
-                    <p class="service-desc">El servicio estrella. Corte completo a elección más arreglo integral de barba con toalla caliente.</p>
-                </div>
-                <div class="service-price-time">
-                    <span>⏱️ 50 min</span>
-                    <span>$12.000</span>
-                </div>
+    <!-- Único Servicio -->
+    <section class="services" id="servicio">
+        <div class="single-service-card">
+            <h3 class="service-title">Corte de Pelo</h3>
+            <p class="service-desc">Corte profesional adaptado a tu estilo, perfilado, lavado y peinado con productos de calidad.</p>
+            <div class="service-price-time">
+                <span>⏱️ 30 min</span>
+                <span>$12.000</span>
             </div>
         </div>
     </section>
 
-    <!-- Reservas (Cal.com Embed Integrado) -->
+    <!-- Reservas (Cal.com Embed Integrado con Demo Activa) -->
     <section class="booking-section" id="reservar">
         <h2 class="section-title">Seleccioná tu Turno</h2>
         
@@ -262,16 +226,15 @@
             (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let cal = C.Cal = C.Cal || function () { let cal = C.Cal; let args = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; p(cal, args); cal.loaded = true; } else { cal.q.push(args); } }; cal.ns[L] = cal.ns[L] || function () { let cal = cal.ns[L]; let args = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; p(cal, args); cal.loaded = true; } else { cal.q.push(args); } }; })(window, "https://app.cal.com/embed/embed.js", "init");
             Cal("init", {origin:"https://cal.com"});
 
-            // AQUÍ CAMBIAS "usuario-cal/turno" POR EL USUARIO Y EVENTO REAL DE CAL.COM
+            // CUENTA DE DEMO ACTIVA (Poder seleccionar turno inmediatamente)
             Cal("inline", {
                 elementOrSelector:"#my-cal-inline",
-                calLink: "usuario-cal/turno",
+                calLink: "rick/30min",
                 config: {"layout":"month_view"}
             });
 
             Cal("ui", {"styles":{"branding":{"brandColor":"#d4af37"}},"hideEventTypeDetails":false,"layout":"month_view"});
             </script>
-            <!-- Cal inline embed code end -->
         </div>
     </section>
 
