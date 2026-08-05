@@ -89,7 +89,7 @@
         .hero {
             padding: 120px 8% 100px;
             text-align: center;
-            background: linear-gradient(180deg, rgba(15,17,21,0.65) 0%, rgba(15,17,21,0.95) 100%),
+            background: linear-gradient(180deg, rgba(15,17,21,0.5) 0%, rgba(15,17,21,1) 100%),
                         url('foto-barberia.jpg') center top / cover no-repeat;
             display: flex;
             flex-direction: column;
@@ -102,7 +102,7 @@
             font-weight: 800;
             margin-bottom: 15px;
             text-transform: uppercase;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.9);
         }
 
         .hero h1 span {
@@ -114,7 +114,7 @@
             color: var(--text-muted);
             max-width: 600px;
             margin: 0 auto;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.9);
         }
 
         /* Sección del Servicio */
@@ -183,14 +183,20 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
+        /* AJUSTE CLAVE EN CELULARES */
         @media (max-width: 768px) {
             .hero {
-                padding: 140px 6% 120px;
-                background-position: center 30%;
+                padding: 100px 5% 80px;
+                background-size: 100% auto; /* Ajusta la imagen al ancho exacto de la pantalla sin cortar los costados */
+                background-position: center top;
             }
 
             .hero h1 { 
-                font-size: 2.1rem; 
+                font-size: 1.8rem; 
+            }
+
+            .hero p {
+                font-size: 0.95rem;
             }
 
             header { 
@@ -207,7 +213,7 @@
 
     <!-- Header -->
     <header>
-        <div class="logo">✂️ BARBERÍA</div>
+        <div class="logo"> BARBERÍA</div>
         <nav>
             <a href="#servicio">Servicio</a>
             <a href="#reservar">Reservar Turno</a>
@@ -227,24 +233,22 @@
             <h3 class="service-title">Corte de Pelo</h3>
             <p class="service-desc">Corte profesional adaptado a tu estilo, perfilado y peinado con productos de calidad.</p>
             <div class="service-price-time">
-                <span>⏱️ 30 min</span>
+                <span> 30 min</span>
                 <span>$12.000</span>
             </div>
         </div>
     </section>
 
-    <!-- Reservas (Cal.com Embed Integrado con Demo Activa) -->
+    <!-- Reservas -->
     <section class="booking-section" id="reservar">
         <h2 class="section-title">Seleccioná tu Turno</h2>
         
         <div class="booking-container">
-            <!-- Cal inline embed code -->
             <div style="width:100%;height:500px;overflow:scroll" id="my-cal-inline"></div>
             <script type="text/javascript">
             (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let cal = C.Cal = C.Cal || function () { let cal = C.Cal; let args = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; p(cal, args); cal.loaded = true; } else { cal.q.push(args); } }; cal.ns[L] = cal.ns[L] || function () { let cal = cal.ns[L]; let args = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; p(cal, args); cal.loaded = true; } else { cal.q.push(args); } }; })(window, "https://app.cal.com/embed/embed.js", "init");
             Cal("init", {origin:"https://cal.com"});
 
-            // CUENTA DE DEMO ACTIVA
             Cal("inline", {
                 elementOrSelector:"#my-cal-inline",
                 calLink: "rick/30min",
